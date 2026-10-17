@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dieter Kern — Web Design & Simple Web Apps</title>
+
+  <!-- Inter font; optional, replace with system stack if preferred -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#" aria-label="Dieter Kern home">Dieter Kern</a>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <svg width="24" height="24" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+      <ul class="mobile-nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p>I’m Dieter Kern, a freelance web designer and developer focused on creating clean, usable web pages and lightweight web applications. I value clarity, performance, and accessible interfaces.</p>
+          <p>My process emphasizes simplicity and practical results: fast load times, clear information architecture, and designs that scale across devices.</p>
+          <p class="highlights"><strong>Highlights:</strong> Rapid prototyping • Accessible, semantic HTML</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Project card 1 -->
+          <article class="project-card">
+            <a class="project-image-link" href="#" target="_blank" rel="noopener">
+              <picture>
+                <img src="images/placeholder-1.jpg" alt="Screenshot of Project 1" loading="lazy" width="800" height="450">
+              </picture>
+            </a>
+            <div class="project-card-body">
+              <h3 class="project-title"><a href="#" target="_blank" rel="noopener">Project One</a></h3>
+              <p class="project-desc">A clean marketing page and small CMS for a local business, focused on clarity and responsiveness.</p>
+              <div class="project-meta">
+                <time datetime="2024-06">Jun 2024</time>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project card 2 -->
+          <article class="project-card">
+            <a class="project-image-link" href="#" target="_blank" rel="noopener">
+              <picture>
+                <img src="images/placeholder-2.jpg" alt="Screenshot of Project 2" loading="lazy" width="800" height="450">
+              </picture>
+            </a>
+            <div class="project-card-body">
+              <h3 class="project-title"><a href="#" target="_blank" rel="noopener">Project Two</a></h3>
+              <p class="project-desc">A simple web app for tracking small tasks with an emphasis on performance and usability.</p>
+              <div class="project-meta">
+                <time datetime="2023-11">Nov 2023</time>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project card 3 -->
+          <article class="project-card">
+            <a class="project-image-link" href="#" target="_blank" rel="noopener">
+              <picture>
+                <img src="images/placeholder-3.jpg" alt="Screenshot of Project 3" loading="lazy" width="800" height="450">
+              </picture>
+            </a>
+            <div class="project-card-body">
+              <h3 class="project-title"><a href="#" target="_blank" rel="noopener">Project Three</a></h3>
+              <p class="project-desc">A minimal ecommerce landing prototype emphasizing accessible forms and checkout flow.</p>
+              <div class="project-meta">
+                <time datetime="2022-08">Aug 2022</time>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-inner">
+        <div class="contact-form-wrap">
+          <h2 class="section-title">Get in Touch</h2>
+
+          <!-- Replace ACTION_URL with your Formspree/Netlify/server endpoint -->
+          <form id="contact-form" class="contact-form" method="POST" action="ACTION_URL">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required minlength="2" />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit" class="btn-primary">Send Message</button>
+
+            <div id="form-status" role="status" aria-live="polite" class="form-status"></div>
+          </form>
+        </div>
+
+        <div class="contact-side">
+          <div class="social-links" aria-hidden="false">
+            <a class="social-link" href="https://github.com/milear" target="_blank" rel="noopener" aria-label="GitHub (opens in new tab)">GitHub</a>
+            <a class="social-link" href="mailto:you@example.com" aria-label="Send an email">Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>&copy; <span id="year"></span> Dieter Kern</small>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

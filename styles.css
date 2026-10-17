@@ -1,0 +1,240 @@
+/* Styles for Dieter Kern minimalist portfolio */
+:root{
+  --color-bg: #FFFFFF;
+  --color-surface: #F5F5F5;
+  --color-text: #2B2B2B;
+  --color-heading: #000000;
+  --color-accent: #001F3F;
+  --color-border: #E0E0E0;
+  --color-accent-dark: #000A2E;
+
+  --max-width: 1200px;
+
+  --gap-mobile: 16px;
+  --gap-tablet: 32px;
+  --gap-desktop: 48px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--color-bg);
+  color:var(--color-text);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+  font-size:16px;
+  letter-spacing:0.01em;
+}
+
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:16px;
+}
+
+.skip-link{
+  position:fixed;
+  left:8px;
+  top:8px;
+  background:var(--color-accent);
+  color:white;
+  padding:8px;
+  border-radius:4px;
+  z-index:1000;
+  transform:translateY(-120%);
+  transition:transform .15s ease;
+}
+.skip-link:focus{transform:none}
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:transparent;
+  transition:background .2s ease, box-shadow .2s ease;
+  border-bottom:1px solid transparent;
+}
+.site-header.scrolled{
+  background:rgba(255,255,255,0.98);
+  box-shadow:0 1px 8px rgba(11,15,20,0.04);
+  border-color:var(--color-border);
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:56px;
+}
+
+.logo{
+  font-weight:600;
+  color:var(--color-heading);
+  font-size:18px;
+  text-decoration:none;
+}
+
+.nav-desktop{display:none}
+.nav-list{
+  list-style:none;
+  display:flex;
+  gap:24px;
+  margin:0;
+  padding:0;
+}
+.nav-list a{
+  color:var(--color-accent);
+  text-decoration:none;
+  padding:8px;
+  transition:color .15s, text-decoration .15s;
+}
+.nav-list a:hover,
+.nav-list a:focus{ color:var(--color-accent-dark); text-decoration:underline; outline:none;}
+
+.hamburger{
+  background:none;
+  border:0;
+  color:var(--color-accent);
+  padding:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+.hamburger:focus{outline:3px solid rgba(0,31,63,0.12); border-radius:6px}
+
+.mobile-menu{
+  display:none;
+  background:var(--color-bg);
+  border-top:1px solid var(--color-border);
+}
+.mobile-nav-list{
+  list-style:none;
+  margin:0;
+  padding:12px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.mobile-nav-list a{
+  display:block;
+  padding:12px 8px;
+  color:var(--color-accent);
+  text-decoration:none;
+  font-weight:500;
+}
+.mobile-nav-list a:focus{outline:3px solid rgba(0,31,63,0.12); border-radius:6px}
+
+.section{
+  padding:32px 0;
+}
+.section-title{
+  font-size:20px;
+  margin:0 0 16px 0;
+  color:var(--color-heading);
+}
+
+.about-section{background:var(--color-bg)}
+.about-content{
+  max-width:700px;
+  color:var(--color-text);
+}
+.about-content p{margin:0 0 16px}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+  align-items:start;
+}
+.project-card{
+  border:1px solid var(--color-border);
+  background:var(--color-bg);
+  border-radius:6px;
+  overflow:hidden;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.project-card:hover{transform:translateY(-4px); box-shadow:0 8px 24px rgba(11,15,20,0.06)}
+.project-image-link img{display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover}
+.project-card-body{padding:16px}
+.project-title{margin:0 0 8px; font-size:18px; color:var(--color-heading)}
+.project-title a{color:inherit; text-decoration:none}
+.project-desc{margin:0 0 12px; color:var(--color-text); font-size:14px}
+.project-meta{display:flex; justify-content:flex-end; color:var(--color-border); font-size:12px}
+
+.contact-inner{
+  display:block;
+  gap:24px;
+}
+.contact-form-wrap{max-width:640px}
+.contact-form{display:flex; flex-direction:column; gap:12px}
+.contact-form label{font-size:14px}
+.contact-form input,
+.contact-form textarea{
+  border:1px solid var(--color-border);
+  padding:10px;
+  border-radius:6px;
+  font:inherit;
+  transition:box-shadow .12s, border-color .12s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline:none;
+  border-color:var(--color-accent);
+  box-shadow:0 0 0 4px rgba(0,31,63,0.06);
+}
+.btn-primary{
+  background:var(--color-accent);
+  color:#fff;
+  border:0;
+  padding:12px 24px;
+  border-radius:4px;
+  cursor:pointer;
+  font-weight:600;
+  transition:background .12s, transform .12s;
+}
+.btn-primary:hover{background:var(--color-accent-dark); transform:translateY(-1px)}
+.form-status{margin-top:6px; font-size:14px}
+
+.social-links{display:flex; gap:16px; align-items:center; margin-top:16px}
+.social-link{color:var(--color-accent); text-decoration:none}
+.social-link:hover{opacity:0.85; text-decoration:underline}
+
+.site-footer{
+  background:var(--color-surface);
+  border-top:1px solid var(--color-border);
+}
+.footer-inner{
+  padding:16px;
+  text-align:center;
+  height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--color-border);
+  font-size:12px;
+}
+
+@media (min-width: 768px){
+  .container{padding:32px}
+  .header-inner{height:56px}
+  .nav-desktop{display:block}
+  .hamburger{display:none}
+  .mobile-menu{display:none !important}
+
+  .projects-grid{grid-template-columns: repeat(2, 1fr); gap:24px}
+  .section{padding:48px 0}
+  .section-title{font-size:28px}
+}
+
+@media (min-width: 1024px){
+  .container{padding:48px}
+  .header-inner{height:60px}
+  .logo{font-size:20px}
+  .projects-grid{grid-template-columns: repeat(3, 1fr); gap:32px}
+  .section-title{font-size:32px}
+}
+
+.hidden{display:none}
