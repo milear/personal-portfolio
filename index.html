@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Milena Rincón — Web Design & Simple Web Apps</title>
 
+  <!-- Inter font; optional, replace with system stack if preferred -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
@@ -43,23 +44,11 @@
   <main id="main">
     <section id="about" class="section about-section">
       <div class="container">
-        <div class="about-layout">
-          <div class="about-copy">
-            <h2 class="section-title">About Me</h2>
-            <p>I’m Milena Rincón, a freelance web designer and developer focused on creating clean, usable web pages and lightweight web applications. I value clarity, performance, and accessible interfaces.</p>
-            <p>My process emphasizes simplicity and practical results: fast load times, clear information architecture, and designs that scale across devices.</p>
-            <p class="highlights"><strong>Highlights:</strong> Rapid prototyping • Accessible, semantic HTML</p>
-          </div>
-
-          <div class="about-visual">
-            <img
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
-              alt="Person coding at a laptop while designing a web page"
-              loading="lazy"
-              width="1200"
-              height="900"
-            >
-          </div>
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p>I’m Milena Rincón, a freelance web designer and developer focused on creating clean, usable web pages and lightweight web applications. I value clarity, performance, and accessible interfaces.</p>
+          <p>My process emphasizes simplicity and practical results: fast load times, clear information architecture, and designs that scale across devices.</p>
+          <p class="highlights"><strong>Highlights:</strong> Rapid prototyping • Accessible, semantic HTML</p>
         </div>
       </div>
     </section>
@@ -69,6 +58,7 @@
         <h2 class="section-title">Projects</h2>
 
         <div class="projects-grid">
+          <!-- Project card 1 -->
           <article class="project-card">
             <a class="project-image-link" href="https://www.goldenbirdconsultoria.com/" target="_blank" rel="noopener">
               <picture>
@@ -84,6 +74,7 @@
             </div>
           </article>
 
+          <!-- Project card 2 -->
           <article class="project-card">
             <a class="project-image-link" href="https://www.intencionalser.com/" target="_blank" rel="noopener">
               <picture>
@@ -99,6 +90,7 @@
             </div>
           </article>
 
+          <!-- Project card 3 -->
           <article class="project-card">
             <a class="project-image-link" href="https://eureka-coachaves.netlify.app/" target="_blank" rel="noopener">
               <picture>
