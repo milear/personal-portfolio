@@ -19,9 +19,9 @@
 
       <nav class="nav-desktop" aria-label="Primary">
         <ul class="nav-list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">Acerca de</a></li>
+          <li><a href="#projects">Projectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
         </ul>
       </nav>
 
@@ -34,28 +34,31 @@
 
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
       <ul class="mobile-nav-list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">Acerca de</a></li>
+        <li><a href="#projects">Projectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
     <section id="about" class="section about-section">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
+      <div class="container-about">
         <div class="about-content">
-          <p>I’m Milena Rincón, a freelance web designer and developer focused on creating clean, usable web pages and lightweight web applications. I value clarity, performance, and accessible interfaces.</p>
-          <p>My process emphasizes simplicity and practical results: fast load times, clear information architecture, and designs that scale across devices.</p>
-          <p class="highlights"><strong>Highlights:</strong> Rapid prototyping • Accessible, semantic HTML</p>
+          <h2 class="section-title">Quién soy...</h2>
+          <p>Soy Milena Rincón, diseñadora y desarrolladora web independiente, especializada en crear páginas web limpias y fáciles de usar, así como aplicaciones web ligeras. Valoro la claridad, el rendimiento y las interfaces accesibles.</p>
+          <p>Mi proceso se centra en la simplicidad y los resultados prácticos: tiempos de carga rápidos, una arquitectura de la información clara y diseños adaptables a distintos dispositivos.</p>
+          <p class="highlights"><strong>Aspectos destacados:</strong>Prototipado rápido y accesible, desarrollo HTML</p>
+        </div>
+        <div class="project-image-link">
+          <img src="images/web.jpg">
         </div>
       </div>
     </section>
 
     <section id="projects" class="section projects-section">
       <div class="container">
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title">Projectos</h2>
 
         <div class="projects-grid">
           <!-- Project card 1 -->
@@ -67,7 +70,7 @@
             </a>
             <div class="project-card-body">
               <h3 class="project-title">Golden Bird</h3>
-              <p class="project-desc">A clean marketing page and small CMS for a local business, focused on clarity and responsiveness.</p>
+              <p class="project-desc">Una página de marketing limpia, con adaptabilidad a distintos dispositivos.</p>
               <div class="project-meta">
                 <time datetime="2022-06">Jun 2022</time>
               </div>
@@ -83,7 +86,7 @@
             </a>
             <div class="project-card-body">
               <h3 class="project-title">Intencional Ser</h3>
-              <p class="project-desc">A simple web app for tracking small tasks with an emphasis on performance and usability.</p>
+              <p class="project-desc">Una pagina web sencilla para presentar una empresa de coaching, de facil exploración.</p>
               <div class="project-meta">
                 <time datetime="2021-11">Nov 2021</time>
               </div>
@@ -99,7 +102,7 @@
             </a>
             <div class="project-card-body">
               <h3 class="project-title">Eureka</h3>
-              <p class="project-desc">A minimal sistemic coach landing prototype emphasizing accessible forms and checkout flow.</p>
+              <p class="project-desc">Un prototipo minimalista de una página de presentación para un coach sistémico.</p>
               <div class="project-meta">
                 <time datetime="2023-08">Aug 2023</time>
               </div>
@@ -112,19 +115,19 @@
     <section id="contact" class="section contact-section">
       <div class="container contact-inner">
         <div class="contact-form-wrap">
-          <h2 class="section-title">Get in Touch</h2>
+          <h2 class="section-title">Contacto</h2>
 
           <form id="contact-form" class="contact-form" method="POST" action="ACTION_URL">
-            <label for="name">Name</label>
+            <label for="name">Nombre</label>
             <input id="name" name="name" type="text" required minlength="2" />
 
             <label for="email">Email</label>
             <input id="email" name="email" type="email" required />
 
-            <label for="message">Message</label>
+            <label for="message">Mensaje</label>
             <textarea id="message" name="message" rows="6" required></textarea>
 
-            <button type="submit" class="btn-primary">Send Message</button>
+            <button type="submit" class="btn-primary">Enviar mensaje</button>
 
             <div id="form-status" role="status" aria-live="polite" class="form-status"></div>
           </form>
